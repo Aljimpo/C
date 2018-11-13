@@ -1,39 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Definición de constantes */
-
-#define MIN_HDL 20.0
-#define MAX_HDL 80.0
-
-#define MIN_LDL 100.0
-#define MAX_LDL 220.0
-
-#define MIN_EDAD 1.0
-#define MAX_EDAD 105.0
-
-#define MIN_PESO 5.0
-#define MAX_PESO 150.0
-
-#define MIN_TALLA 0.5
-#define MAX_TALLA 2.20
-
-#define MIN_IMC 0.0
-#define MAX_IMC 100.0
+/* Definicion de constantes */
 
 #define VECES_PESO 4
 
-#define MAX_CAD 30
 void pesosMes(double* pesomes){
+    
 int i;
 
-
-   for(i=1;i<sizeof(VECES_PESO);i++){
-        scanf("%lf\n",&pesomes[i]);
-    }
-
-//    printf("%f\n\n",pesomes[2]);
-
+scanf("%lf" "%lf" "%lf" "%lf",&pesomes[1],&pesomes[2],&pesomes[3],&pesomes[4]);
 
 }
 
@@ -43,10 +19,10 @@ void main (void){
     pesosMes(pesomes);
 
     double peso_min;
-    peso_min = pesomes[0];
+    peso_min = pesomes[1];
 
     double peso_max;
-    peso_max = pesomes[1];
+    peso_max = pesomes[4];
 
     int i;
 
