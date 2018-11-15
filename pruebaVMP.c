@@ -6,38 +6,37 @@
 #define VECES_PESO 4
 
 void pesosMes(double* pesomes){
-    
-int i;
-
-scanf("%lf" "%lf" "%lf" "%lf",&pesomes[1],&pesomes[2],&pesomes[3],&pesomes[4]);
-
+scanf("%lf" "%lf" "%lf" "%lf",&pesomes[0],&pesomes[1],&pesomes[2],&pesomes[3]);
 }
 
 void main (void){
-
     double pesomes[VECES_PESO];
     pesosMes(pesomes);
+    pesoMinMax(pesomes);
+}
 
-    double peso_min;
-    peso_min = pesomes[1];
+void pesoMinMax (double *pesomes, double *peso_minn, double *peso_maxx){
 
-    double peso_max;
-    peso_max = pesomes[4];
+    double pesomin;
+    double pesomax;
+
+    peso_minn = &pesomes[0];
+    peso_maxx = &pesomes[0];
+
+    pesomin = *peso_minn;
+    pesomax = *peso_maxx;
+
 
     int i;
-
-    for(i=1;i<sizeof(VECES_PESO);i++){
-        if (peso_min < pesomes[i]){
-            peso_min = pesomes[i];
+    for(i=0;i<sizeof(pesomes);i++){
+        if (pesomes[i] < pesomin){
+            pesomin = pesomes[i];
         }
-        if (peso_max > pesomes[i]){
-            peso_max = pesomes[i];
+        if (pesomes[i] > pesomax){
+            pesomax = pesomes[i];
         }
+    }
+    printf("El peso min es:%f\n",pesomin);
+    printf("El peso max es:%f\n",pesomax);
 }
 
-printf("%f\n",peso_min);
-printf("%f\n",peso_max);
-}
-
-
-void pesoMinMax (void);
